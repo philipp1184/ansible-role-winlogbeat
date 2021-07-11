@@ -117,7 +117,6 @@ output.{{ winlogbeat_output }}:
   port: {{ elasticsearch.port }}
 {% elif winlogbeat_output == "logstash" %}
   hosts: ["{{ logstash.host }}"]
-  port: {{ logstash.port }}
 {% endif %}
   bulk_max_size: {{ winlogbeat_bulk_max_size }}
   worker: {{ winlogbeat_worker }}
